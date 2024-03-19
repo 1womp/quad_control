@@ -31,25 +31,21 @@ float destheta_p = 0;  //mando a angular_control (constante)
 float desphi_p = 0;    //mando a angular_control (constante)
 float despsi_p = 0;    //mando a angular_control (recibo de trajectory_control)
 float desz_pp = 0;     //(permanece en zero)
-
 float uvx = 0;         //calculo
 float uvy = 0;         //calculo
 float uvz = 0;         //calculo
-
 float error_x = 0;     //calculo
 float error_x_p = 0;   //calculo
 float error_y = 0;     //calculo
 float error_y_p = 0;   //calculo
 float error_z = 0;     //calculo
 float error_z_p = 0;   //calculo
-
 float kpuvx = 0.1;    //constante
 float kduvx = 0.8;     //constante
 float kpuvy = 0.1;    //constante
 float kduvy = 0.8;     //constante
 float kpuvz = 0.1;    //constante
 float kduvz = 1.2;     //constante
-
 float mass = 2;        //constante
 float g = 9.81;        //constante
 

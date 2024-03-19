@@ -35,7 +35,6 @@ float psi_u = 0;        //calculo
 float Jxx = 0.0411;     //constante
 float Jyy = 0.0478;     //constante
 float Jzz = 0.0599;     //constante
-
 float kptheta = 2.1;    //constante
 float kdtheta = 3.2;    //constante
 float kpphi = 3.8;      //constante

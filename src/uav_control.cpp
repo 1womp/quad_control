@@ -101,7 +101,6 @@ int main(int argc, char **argv)
         quad_control::uav_message uav_message_msg;
         
         //angular
-
         w_pp = J.inverse() * (torque - (w_p.cross(J*w_p)));
 
         for(int i = 0; i <= 2; i++)
@@ -115,22 +114,22 @@ int main(int argc, char **argv)
 			att(i) = att(i) + 0.01 * att_p(i);
 		}
 
-        // https://msl.cs.uiuc.edu/planning/node102.html
-
         //linear
         f = thrust*e3 + (R()).transpose()*(mass*g*e3);
 
         v_p = f/mass - w_p.cross(v);
 
-		v(0) = v(0) + 0.01 * v_p(0);
-        v(1) = v(1) + 0.01 * v_p(1);
-        v(2) = v(2) + 0.01 * v_p(2);
+        for(int i = 0; i <= 2; i++)
+		{
+			v(i) = v(i) + 0.01 * v_p(i);
+		}
 
         p_p = R() * v;
 
-		p(0) = p(0) + 0.01 * p_p(0);
-        p(1) = p(1) + 0.01 * p_p(1);
-        p(2) = p(2) + 0.01 * p_p(2);
+		for(int i = 0; i <= 2; i++)
+		{
+			p(i) = p(i) + 0.01 * p_p(i);
+		}
 
         uav_message_msg.x = p(0);
         uav_message_msg.y = p(1);
