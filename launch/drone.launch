@@ -1,0 +1,10 @@
+<launch>
+
+	
+	<node pkg="quad_control" type="trajectory_control_node" name="trajectory_control_node"  />
+    <node pkg="quad_control" type="linear_control_node" name="linear_control_node"  />
+    <node pkg="quad_control" type="angular_control_node" name="angular_control_node"  />
+    <node pkg="quad_control" type="uav_control_node" name="uav_control_node"  />
+	
+
+</launch>

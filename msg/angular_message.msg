@@ -1,0 +1,6 @@
+float32 torque_theta
+float32 torque_phi
+float32 torque_psi
+float32 error_theta
+float32 error_phi
+float32 error_psi
